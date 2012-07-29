@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1343582159 source:c:\users\stephen jackson\documents\unloaddisc\main.cpp
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<windows.h>
+	<cstdio>
+

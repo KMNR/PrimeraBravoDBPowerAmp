@@ -1,0 +1,24 @@
+= DBPoweramp Disc Loader For Primera Bravo =
+
+This software is two disc loader programs to use a Primera Bravo with DBPoweramp.
+
+== Using This Software ==
+
+To use the software compile it using code::blocks. I recommend using the release
+build option instead of the debug build option. To create the loader, navigate
+to the BatcheRiper\loader folder in your DBPoweramp folder and create a folder
+(for example bravo) and create Load, Unload, and Reject folders within that.
+
+1. Rename the LoadDisc.exe executable to Load.exe and place it in the Load folder.
+1. Rename the UnloadDisc.exe executable to Unload.exe and place it in the Unload folder.
+1. Rename the UnloadDisc.exe executable to Reject.exe and place it in the Reject folder.
+
+This loader uses the PTBurn server to manipulate the robot since Primera doesn't provide
+direct manipulation drivers. As such, things can get a little sketchy! If you've moved the
+PTBurnJobs folder from the default C:\PTBurnJobs folder to a different location you'll
+need to edit the source and recompile.
+
+The LoadDisc.exe and UnloadDisc.exe applications will both stay open (and block the
+batch ripper software) until a disc is loaded. I have seen issues where the programs will
+hang on exit and consume 100% CPU, but compiling with release and checking the fstreams
+more frequently seems to have solved that issue.
